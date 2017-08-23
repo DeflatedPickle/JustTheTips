@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "justthetips",
+    "name": "JustTheTips",
+    "description": "Adds some tips to loading screens.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "updateUrl": "",
+    "authorList": ["DeflatedPickle"],
+    "credits": "DeflatedPickle",
+    "url": "https://github.com/DeflatedPickle/JustTheTips",
+    "logoFile": "logo.png",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
