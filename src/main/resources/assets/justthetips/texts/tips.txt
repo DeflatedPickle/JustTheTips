@@ -1,0 +1,6 @@
+Torches can create temporary air pockets underwater.
+Signs and ladders stop the flow of liquids.
+Blazes hate snowballs.
+You only need two buckets of water to create an infinite water source.
+Water makes for a good lawn mower.
+You can set your spawn point by sleeping in a bed.
