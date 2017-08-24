@@ -2,8 +2,6 @@ package com.deflatedpickle.justthetips;
 
 import com.deflatedpickle.justthetips.proxy.CommonProxy;
 
-import com.deflatedpickle.justthetips.utils.TipUtil;
-import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -47,7 +45,6 @@ public class JustTheTips {
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         logger.info("Starting postInit.");
-
         logger.info("Finished postInit.");
     }
 }
