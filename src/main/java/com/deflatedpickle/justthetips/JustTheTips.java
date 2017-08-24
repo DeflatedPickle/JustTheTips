@@ -26,7 +26,6 @@ public class JustTheTips {
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static CommonProxy proxy;
 
-    public static Configuration configuration;
     public static final Logger logger = LogManager.getLogger(Reference.NAME);
     public static final Random random = new Random();
 
@@ -35,7 +34,6 @@ public class JustTheTips {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger.info("Starting preInit.");
-        TipUtil.loadTips(tipList);
         logger.info("Finished preInit.");
     }
 
