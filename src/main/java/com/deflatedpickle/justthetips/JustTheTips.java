@@ -3,6 +3,7 @@ package com.deflatedpickle.justthetips;
 import com.deflatedpickle.justthetips.utils.TipUtil;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInterModComms;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,5 +24,16 @@ public class JustTheTips {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         TipUtil.loadTips(tipList, new File(event.getModConfigurationDirectory(), "tips.txt"));
+    }
+
+    @EventHandler
+    public void onImcMessage(FMLInterModComms.IMCEvent event) {
+        for (FMLInterModComms.IMCMessage message : event.getMessages()) {
+            if (!message.isStringMessage())
+                continue;
+
+            if (message.key.equalsIgnoreCase("add_tip") && !tipList.contains(message.getStringValue()))
+                tipList.add(message.getStringValue());
+        }
     }
 }
