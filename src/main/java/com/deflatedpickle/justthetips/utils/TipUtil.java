@@ -30,7 +30,7 @@ public class TipUtil {
     }
 
     public static void drawTips(FontRenderer fontRenderer){
-        fontRenderer.drawString(TextFormatting.BOLD.toString() + TextFormatting.YELLOW.toString() + I18n.format("tip.title.name") + " #" + (ForgeEventHandler.tipIndex + 1) + ":", 5, new ScaledResolution(Minecraft.getMinecraft()).getScaledHeight() - 50, 0xFFFFFF);
+        fontRenderer.drawString(TextFormatting.BOLD.toString() + TextFormatting.YELLOW.toString() + I18n.format("tip.title.name", ForgeEventHandler.tipIndex + 1), 5, new ScaledResolution(Minecraft.getMinecraft()).getScaledHeight() - 50, 0xFFFFFF);
         fontRenderer.drawSplitString(TextFormatting.WHITE + ForgeEventHandler.tip, 5, new ScaledResolution(Minecraft.getMinecraft()).getScaledHeight() - 40, new ScaledResolution(Minecraft.getMinecraft()).getScaledWidth() - 5, 0xFFFFFF);
     }
 }
