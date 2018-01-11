@@ -1,5 +1,6 @@
 package com.deflatedpickle.justthetips.events;
 
+import com.deflatedpickle.justthetips.Reference;
 import com.deflatedpickle.justthetips.utils.TipUtil;
 import net.minecraft.client.LoadingScreenRenderer;
 import net.minecraft.client.Minecraft;
@@ -14,6 +15,7 @@ import net.minecraftforge.fml.relauncher.ReflectionHelper;
 
 import java.lang.reflect.Field;
 
+@Mod.EventBusSubscriber(modid = Reference.MOD_ID)
 public final class ScreenHook {
     private static final class Holder {
         private static final ScreenHook INSTANCE = new ScreenHook();
